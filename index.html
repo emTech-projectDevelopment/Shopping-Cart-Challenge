@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,16 +13,18 @@
     <script src="script.js" async></script>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Shopping Cart</title>
 
 </head>
+
 <body>
     <header>
-        <nav>
+        <nav id="nav-links">
             <ul>
-                <li><a href="#shopOnline">Shop Online</a></li>
-                <li><a href="#myCart">My Cart</a></li>
+                <li><a href="#shop-section">Shop Online</a></li>
+                <li><a href="#cart-section">My Cart</a></li>
             </ul>
         </nav>
     </header>
@@ -30,38 +33,58 @@
     <hr>
     <br>
 
-    <section class="container md-8 m-auto content-section">
-        <h2 class="section-header">T-Shirts</h2>
-        <div class="row shop-items sm-1 md-6 lg-9 m-3-auto">
-            <div class="column shop-item">
+    <h2 class="section-header">New Season T-Shirts</h2>
+    <section class="container shop-container" id="shop-section">
+        <div class="row shop-items">
+
+            <div class="column d-block w-25 m-auto shop-item">
                 <span class="shop-item-title">Black T-Shirt</span>
+                <br>
                 <img class="shop-item-image" src="./asset/images/blackShirt.jpeg" alt="black tshirt">
                 <div class="shop-item-details">
+                    <p class="shop-item-description w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Obcaecati iusto ducimus consectetur.</p>
                     <span class="shop-item-price">$24.99</span>
+                    <br>
                     <button class="btn btn-primary shop-item-btn" id="addToCart" type="button">Add to cart</button>
                 </div>
             </div>
-            <div class="column column-md shop-item">
+            
+            <div class="column d-block w-25 m-auto shop-item">
                 <span class="shop-item-title">Green T-Shirt</span>
+                <br>
                 <img class="shop-item-image" src="./asset/images/greenShirt.jpeg" alt="green tshirt">
                 <div class="shop-item-details">
+                    <p class="shop-item-description w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Obcaecati iusto ducimus consectetur.</p>
                     <span class="shop-item-price">$29.99</span>
+                    <br>
                     <button class="btn btn-primary shop-item-btn" id="addToCart" type="button">Add to cart</button>
                 </div>
             </div>
-            <div class="column shop-item">
+
+            <div class="column d-block w-25 m-auto shop-item">
                 <span class="shop-item-title">White T-Shirt</span>
+                <br>
                 <img class="shop-item-image" src="./asset/images/whiteShirt.jpeg" alt="white tshirt">
                 <div class="shop-item-details">
+                    <p class="shop-item-description w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Obcaecati iusto ducimus consectetur.</p>
                     <span class="shop-item-price">$29.99</span>
+                    <br>
                     <button class="btn btn-primary shop-item-btn" id="addToCart" type="button">Add to cart</button>
                 </div>
             </div>
-            <div class="column shop-item">
+
+            <div class="column d-block w-25 m-auto shop-item">
                 <span class="shop-item-title">Blue Dress Shirt</span>
+                <br>
                 <img class="shop-item-image" src="./asset/images/blueDressShirt.jpeg" alt="Blue Dress shirt">
                 <div class="shop-item-details">
+                    <p class="shop-item-description w-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Obcaecati iusto ducimus consectetur.</p>
                     <span class="shop-item-price">$49.99</span>
+                    <br>
                     <button class="btn btn-primary shop-item-btn" id="addToCart" type="button">Add to cart</button>
                 </div>
             </div>
@@ -72,53 +95,141 @@
     <hr>
     <br>
 
-    <section class="container content-section">
-        <h2 class="section-header">Cart</h2>
-        <div class="cart-row">
-            <span class="cart-item cart-header cart-column">Item</span>
-            <span class="cart-price cart-header cart-column">Price</span>
-            <span class="cart-quantity cart-header cart-column">Quantity</span>
-        </div>
+    <h2 class="section-header">T-Shirt Sale!</h2>
+    <section class="container sale-items-container w-50 m-auto">
+        <div class="row sale-items sm-1 md-6 lg-9 m-3-auto">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="column d-block w-50 m-auto sale-item">
+                            <span class="sale-item-title">Black T-Shirt</span>
+                            <br>
+                            <img class="sale-item-image" src="./asset/images/blackShirt.jpeg" alt="black tshirt">
+                            <div class="sale-item-details">
+                                <p class="sale-item-description w-50">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Obcaecati iusto ducimus consectetur.</p>
+                                <span class="sale-item-price">$24.99</span>
+                                <br>
+                                <button class="btn btn-primary sale-item-btn" id="addToCart" type="button">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="column d-block w-50 m-auto sale-item">
+                            <span class="sale-item-title">Green T-Shirt</span>
+                            <br>
+                            <img class="sale-item-image" src="./asset/images/greenShirt.jpeg" alt="green tshirt">
+                            <div class="sale-item-details">
+                                <p class="sale-item-description w-50">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Obcaecati iusto ducimus consectetur.</p>
+                                <span class="sale-item-price">$29.99</span>
+                                <br>
+                                <button class="btn btn-primary sale-item-btn" id="addToCart" type="button">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="column d-block w-50 m-auto sale-item">
+                            <span class="sale-item-title">White T-Shirt</span>
+                            <br>
+                            <img class="sale-item-image" src="./asset/images/whiteShirt.jpeg" alt="white tshirt">
+                            <div class="sale-item-details">
+                                <p class="sale-item-description w-50">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Obcaecati iusto ducimus consectetur.</p>
+                                <span class="sale-item-price">$29.99</span>
+                                <br>
+                                <button class="btn btn-primary sale-item-btn" id="addToCart" type="button">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="column d-block w-50 m-auto sale-item">
+                            <span class="sale-item-title">Blue Dress Shirt</span>
+                            <br>
+                            <img class="sale-item-image" src="./asset/images/blueDressShirt.jpeg"
+                                alt="Blue Dress shirt">
+                            <div class="sale-item-details">
+                                <p class="sale-item-description w-50">Lorem ipsum dolor sit amet, consectetur
+                                    adipisicing elit. Obcaecati iusto ducimus consectetur.</p>
+                                <span class="sale-item-price">$49.99</span>
+                                <br>
+                                <button class="btn btn-primary sale-item-btn" id="addToCart" type="button">Add to
+                                    cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control carousel-control-prev h-50 m-auto" type="button"
+                    data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    < </button>
+                        <button class="carousel-control carousel-control-next h-50 m-auto" type="button"
+                            data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            >
+                        </button>
+            </div>
+    </section>
+
+    <br>
+    <hr>
+    <br>
+
+    <h2 class="section-header">Cart</h2>
+    <section class="cart-container" id="cart-section">
         <div class="cart-items">
-        <div class="cart-row"> 
-            <div class="cart-item cart-column">
-                <img class="cart-item-image" src="./asset/images/whiteShirt.jpeg" alt="White tshirt" class="cart-item-image">
-                <span class="cart-item-title">White T-shirt</span>
+            <div class="column cart-item">
+                <img class="cart-item-image" src="./asset/images/whiteShirt.jpeg" alt="White tshirt"
+                    class="cart-item-image">
+                <div class="cart-description">
+                    <span class="cart-item-title">White T-shirt</span>
+                    <p class="shop-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
+                        iusto ducimus consectetur.</p>
+                </div>
+                <div class="cart-options">
+                    <span class="cart-price">$29.99</span>
+                    <input type="number" class="cart-quantity-input" value="1">
+                    <button class="btn btn-danger" type="button">Remove</button>
+                </div>
             </div>
-            <span class="cart-price cart-column">$29.99</span>
-            <div class="cart-quantity cart-column">
-                <input type="number" class="cart-quantity-input" value="1">
-                <button class="btn btn-danger" type="button">Remove</button>
+            <br>
+            <div class="column cart-item">
+                <img class="cart-item-image" src="./asset/images/blackShirt.jpeg" alt="Black tshirt"
+                    class="cart-item-image">
+                <div class="cart-description">
+                    <span class="cart-item-title">Black T-shirt</span>
+                    <p class="shop-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
+                        iusto ducimus consectetur.</p>
+                </div>
+                <div class="cart-options">
+                    <span class="cart-price">$24.99</span>
+                    <input type="number" class="cart-quantity-input" value="1">
+                    <button class="btn btn-danger" type="button">Remove</button>
+                </div>
             </div>
-        </div>
-        <div class="cart-row"> 
-            <div class="cart-item cart-column">
-                <img class="cart-item-image" src="./asset/images/blackShirt.jpeg" alt="Black tshirt" class="cart-item-image">
-                <span class="cart-item-title">Black T-shirt</span>
+            <br>
+            <div class="column cart-item">
+                <img class="cart-item-image" src="./asset/images/greenShirt.jpeg" alt="green tshirt"
+                    class="cart-item-image">
+                <div class="cart-description">
+                    <span class="cart-item-title">Green T-shirt</span>
+                    <p class="shop-item-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati
+                        iusto ducimus consectetur.</p>
+                </div>
+                <div class="cart-options">
+                    <span class="cart-price">$29.99</span>
+                    <input type="number" class="cart-quantity-input" value="1">
+                    <button class="btn btn-danger" type="button">Remove</button>
+                </div>
             </div>
-            <span class="cart-price cart-column">$24.99</span>
-            <div class="cart-quantity cart-column">
-                <input type="number" class="cart-quantity-input" value="1">
-                <button class="btn btn-danger" type="button">Remove</button>
             </div>
-        </div>
-        <div class="cart-row"> 
-            <div class="cart-item cart-column">
-                <img class="cart-item-image" src="./asset/images/greenShirt.jpeg" alt="green tshirt" class="cart-item-image">
-                <span class="cart-item-title">Green T-shirt</span>
+            <div class="cart-total">
+                <strong class="card-total-title">Total</strong>
+                <br>
+                <span class="cart-total-price">$89.99</span>
+            <button class="btn btn-primary btn-purchase" type="button">Purchase</button>
             </div>
-            <span class="cart-price cart-column">$29.99</span>
-            <div class="cart-quantity cart-column">
-                <input type="number" class="cart-quantity-input" value="1">
-                <button class="btn btn-danger" type="button">Remove</button>
-            </div>
-        </div>
-        </div>
-        <div class="cart-total">
-            <strong class="card-total-title">Total</strong>
-            <span class="cart-total-price">$89.99</span>
-        </div>
-        <button class="btn btn-primary btn-purchase" type="button">Purchase</button>
     </section>
 
     <br>
@@ -126,18 +237,23 @@
     <br>
 
     <footer class="main-footer">
-        <div class="container main-footer-container">
+        
             <h3 class="searchOnline">Search for T-Shirts!</h3>
             <ul class="nav footer-nav">
                 <li>
-                    <a href="www.google.com"><img class="little-shirt" src="./asset/images/blackShirt.jpeg" alt="logo shirt"></a>
+                    <a href="https://www.google.com"><img class="little-shirt" src="./asset/images/blackShirt.jpeg"
+                            alt="logo shirt"></a>
                     <p>Click to search google</p>
                 </li>
+                <li><a href="#nav-links">^ Back to top ^</a></li>
             </ul>
-        </div>
+        
     </footer>
 
     <!-- Bootstrap JS and POPPER -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

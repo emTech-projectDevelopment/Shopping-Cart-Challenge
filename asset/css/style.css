@@ -5,32 +5,104 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    width: 98%;
+    height: auto;
+    background: linear-gradient(rgba(196, 196, 230, 0.434),rgba(161, 34, 196, 0.118));
+}
 
+.shop-container {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.shop-items {
+    width: 90%;
+    margin: auto;
+    align-items: center;
+}
+.shop-item {
+    height: auto;
+    margin: auto 50px;
+    box-shadow: 2px 2px 10px 2px silver;
+
+}
 .shop-item-image {
     width: 120px;
     height: 185px;
     margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 2px 2px 10px 5px;
+    box-shadow: 2px 2px 10px 2px;
 }
 
+.sale-items {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.sale-item {
+    margin: auto;
+}
+.sale-item-image {
+    width: 120px;
+    height: 185px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px 2px;
+}
+button.carousel-control {
+    font-size: 4rem;
+    font-stretch: extra-expanded;
+    border-radius: 10px 20px 10px 20px;
+}
+.cart-container {
+    width: 70%;
+    height: auto;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.cart-item {
+    width: 60%;
+    display: flex;
+}
+.cart-item-image,
+.cart-description,
+.cart-options {
+    width: 30%;
+    height: auto;
+    margin: auto;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
 .cart-item-image {
     width: 110px;
     height: 165px;
-    margin: 20px auto;
     border-radius: 10px;
     box-shadow: 2px 2px 10px 5px;
 }
+.cart-total {
+    width: 170px;
+    height: 140px;
+    text-align: center;
+    align-items: center;
+    border: 1px double silver;
+}
 .little-shirt {
-    width: 47px;
+    width: 54px;
     height: 85px;
-    animation: spin 1.4s 0s linear infinite;
+    animation: spin 1.9s 0s linear infinite;
 }
 @keyframes spin {
-    0% {
-        transform: rotateY(120deg);
-    };
-    99% {
-        transform: rotateY(360deg);
+    99.5% {
+        transform: rotateY(359deg);
     };
 }
+
