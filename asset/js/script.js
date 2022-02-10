@@ -1,57 +1,82 @@
-const ready = 'js ready';
-
-console.log(ready);
-
+// Load Js after all the HTML has loaded
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', pageReady)
 } else {
     pageReady()
 };
 
-function pageReady() {
-    var removeCartItemBtn = document.getElementsByClassName("btn-danger");
+// Test HTML connection
+const ready = 'js script ready';
+console.log(ready);
 
+// Add event Listeners when the page is loaded
+function pageReady() {
+    let removeCartItemBtn = document.getElementsByClassName("btn-danger");
+
+    // Loop through cart item remove button
     for (let i=0; i<removeCartItemBtn.length; i++) {
-        var button = removeCartItemBtn[i];
+        let button = removeCartItemBtn[i];
         button.addEventListener('click', function(event) {
-            var buttonClick = event.target
+            let buttonClick = event.target
             buttonClick.parentElement.parentElement.remove()
         updateCartTotal()
         })
     }
 
-
+    // Add new season item to cart
     const addNewSeasonBtn = document.getElementsByClassName('shop-item-btn');
     for (let i=0; i<addNewSeasonBtn.length; i++) {
-        var button = addNewSeasonBtn[i];
-        button.addEventListener('click', addNewSeasonToCart)
+        let button = addNewSeasonBtn[i];
+        button.addEventListener('click', addNewSeasonItemToCart)
     }
+
 }
+setInterval(pageReady, 500)
+
+const timeElement = document.querySelector('#time');
+
+function tickingTime() {
+    let timeNow = new Date();
+    return (timeElement.innerText = `${timeNow.getHours()}:${timeNow.getMinutes()}:${timeNow.getSeconds()}`);
+  }
+
+  // DISPLAY TIME
+tickingTime();
+setInterval(tickingTime, 1000);
+
 
 function invalidQuantity(event) {
-    var input = event.target;
+    let input = event.target;
     if (isNaN(input.value) || input.value <= 0) {
         input.value = 1;
     }
     updateCartTotal()
 }
 
-function addNewSeasonToCart(event) {
+function addNewSeasonItemToCart(event) {
     let button = event.target;
     let shopItem = button.parentElement.parentElement;
     let title = shopItem.getElementsByClassName('shop-item-title')[0].innerText;
     let description = shopItem.getElementsByClassName('shop-item-description')[0].innerText;
     let price = shopItem.getElementsByClassName('shop-item-price')[0].innerText;
     let imgSrc = shopItem.getElementsByClassName('shop-item-image')[0].src;
-    console.log(title, price, imgSrc)
-    addItemToCart(title, description, price, imgSrc)
+    console.log(title, description, price, imgSrc);
+    addItemToCart(title, description, price, imgSrc);
+    updateCartTotal();
 }
 
 function addItemToCart(title, description, price, imgSrc) {
     let newCartItem = document.createElement('div');
     let cartItems = document.getElementsByClassName('cart-items')[0];
+    let cartItemNames = cartItems.getElementsByClassName('cart-item-title');
+    for (let i = 0; i < cartItemNames.length; i++) {
+        if (cartItemNames[i] == title) {
+            alert('Hey {shopper}! This item is already in your cart.')
+            return
+        }
+    };
     let newCartItemHtml = `
-    <div class="column cart-item">
+            <div class="column cart-item new-cart-item">
                 <img class="cart-item-image" src=${imgSrc} alt="shirt">
                 <div class="cart-description">
                     <span class="cart-item-title">${title}</span>
@@ -65,15 +90,15 @@ function addItemToCart(title, description, price, imgSrc) {
             </div>
             <br>
     `;
-    newCartItem.innerText = newCartItemHtml;
+    newCartItem.innerHTML = newCartItemHtml;
     cartItems.append(newCartItem);
 }
 
 function updateCartTotal() {
     const cartTotalPrice = document.getElementsByClassName('cart-total-price')
-    var cartItemContainer = document.getElementsByClassName('cart-items')[0];
-    var cartRows = cartItemContainer.getElementsByClassName('cart-item');
-    var total = 0;
+    let cartItemContainer = document.getElementsByClassName('cart-items')[0];
+    let cartRows = cartItemContainer.getElementsByClassName('cart-item');
+    let total = 0;
 
     for (let j=0; j<cartRows.length; j++) {
         let cartRow = cartRows[j];
