@@ -10,24 +10,61 @@ body {
     height: auto;
     background: linear-gradient(rgba(196, 196, 230, 0.434),rgba(161, 34, 196, 0.118));
 }
+hr {
+    width: 90%;
+    margin: auto;
+
+}
+header {
+    margin: auto;
+}
+.section-header {
+    width: 60%;
+    margin: auto;
+    margin-left: 15px;
+}
+.right-nav {
+    display: flex;
+    flex-direction: column;
+}
+a.nav-link,
+#user-entry,
+#time {
+    color:rgb(132, 165, 193);    
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px white;
+}
+.shop-quantity-input,
+.cart-quantity-input {
+    width: 3rem;
+    margin: 5px 0px;
+    padding: 0px 1px;
+    font-size: larger;
+    text-align: center;
+    font-variant: small-caps;
+    border-radius: 3px;
+    border: 1px solid black;    
+}
 
 .shop-container {
-    width: 80%;
+    width: 100%;
     height: 80%;
     margin: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    
 }
 .shop-items {
     width: 90%;
     margin: auto;
+    justify-content: space-between;
     align-items: center;
 }
 .shop-item {
     height: auto;
     margin: auto 50px;
-    box-shadow: 2px 2px 10px 2px silver;
 
 }
 .shop-item-image {
@@ -61,7 +98,7 @@ button.carousel-control {
     border-radius: 10px 20px 10px 20px;
 }
 .cart-container {
-    width: 70%;
+    width: 80%;
     height: auto;
     margin: auto;
     display: flex;
@@ -69,18 +106,22 @@ button.carousel-control {
     align-items: center;
 }
 .cart-item {
-    width: 60%;
+    width: auto;
     display: flex;
 }
 .cart-item-image,
 .cart-description,
 .cart-options {
-    width: 30%;
+    width: auto;
     height: auto;
     margin: auto;
     display: block;
     justify-content: center;
     align-items: center;
+}
+.cart-description {
+    width: 65%;
+    margin: auto 5px;
 }
 .cart-item-image {
     width: 110px;
@@ -89,20 +130,34 @@ button.carousel-control {
     box-shadow: 2px 2px 10px 5px;
 }
 .cart-total {
-    width: 170px;
+    width: 140px;
     height: 140px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     align-items: center;
-    border: 1px double silver;
+    border-radius: 10px;
+    box-shadow: 1px 1px 8px 4px white;
+    border: 2px double silver;
+}
+.footer-nav {
+    width: auto;
+    margin: auto;
+    margin-left: 25px;
 }
 .little-shirt {
     width: 54px;
     height: 85px;
-    animation: spin 1.9s 0s linear infinite;
+    border-radius: 22%;
+    animation: spin 2.9s 0s linear infinite;
 }
 @keyframes spin {
+    0% {
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.365);
+    }
     99.5% {
         transform: rotateY(359deg);
+        box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.365);
     };
 }
 

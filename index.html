@@ -21,24 +21,26 @@
 
 <body>
     <header>
-        <nav class="w-75 d-flex justify-content-between align-items-center m-auto m-t-3" id="nav-links">
-            <ul>
-                <li><a href="#shop-section">Shop Online</a></li>
-                <li><a href="#cart-section">My Cart</a></li>
-            </ul>
-            <span id="time"></span>
+        <nav class="w-75 d-flex justify-content-between align-items-center m-auto my-2" id="nav-links">
+            <div class="left-nav">
+                <a href="#shop-section" class="nav-link">Shop Online</a></li>
+                <a href="#cart-section" class="nav-link">My Cart</a></li>
+            </div>
+            <div class="right-nav">
+                <span id="user-entry"></span>
+                <span id="time"></span>
+        </div>
         </nav>
     </header>
 
-    <br>
     <hr>
     <br>
 
     <h2 class="section-header">New Season T-Shirts</h2>
     <section class="container shop-container" id="shop-section">
         <div class="row shop-items">
-
-            <div class="column d-block w-25 m-auto shop-item">
+            
+            <div class="col d-block my-3 mx-1 w-auto m-auto shop-item">
                 <span class="shop-item-title">Black T-Shirt</span>
                 <br>
                 <img class="shop-item-image" src="./asset/images/blackShirt.jpeg" alt="black tshirt">
@@ -51,8 +53,8 @@
                     <button class="btn btn-primary shop-item-btn" id="addToCart" type="button">Add to cart</button>
                 </div>
             </div>
-            
-            <div class="column d-block w-25 m-auto shop-item">
+
+            <div class="col my-3 mx-1 d-block w-auto m-auto shop-item">
                 <span class="shop-item-title">Green T-Shirt</span>
                 <br>
                 <img class="shop-item-image" src="./asset/images/greenShirt.jpeg" alt="green tshirt">
@@ -66,7 +68,7 @@
                 </div>
             </div>
 
-            <div class="column d-block w-25 m-auto shop-item">
+            <div class="col my-3 mx-1 d-block w-auto m-auto shop-item">
                 <span class="shop-item-title">White T-Shirt</span>
                 <br>
                 <img class="shop-item-image" src="./asset/images/whiteShirt.jpeg" alt="white tshirt">
@@ -80,7 +82,7 @@
                 </div>
             </div>
 
-            <div class="column d-block w-25 m-auto shop-item">
+            <div class="col my-3 mx-1 d-block w-auto m-auto shop-item">
                 <span class="shop-item-title">Blue Dress Shirt</span>
                 <br>
                 <img class="shop-item-image" src="./asset/images/blueDressShirt.jpeg" alt="Blue Dress shirt">
@@ -94,6 +96,7 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <br>
@@ -106,7 +109,7 @@
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="column d-block w-50 m-auto sale-item">
+                        <div class="col d-block w-auto m-auto sale-item">
                             <span class="sale-item-title">Black T-Shirt</span>
                             <br>
                             <img class="sale-item-image" src="./asset/images/blackShirt.jpeg" alt="black tshirt">
@@ -121,7 +124,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="column d-block w-50 m-auto sale-item">
+                        <div class="col d-block w-auto m-auto sale-item">
                             <span class="sale-item-title">Green T-Shirt</span>
                             <br>
                             <img class="sale-item-image" src="./asset/images/greenShirt.jpeg" alt="green tshirt">
@@ -136,7 +139,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="column d-block w-50 m-auto sale-item">
+                        <div class="col d-block w-auto m-auto sale-item">
                             <span class="sale-item-title">White T-Shirt</span>
                             <br>
                             <img class="sale-item-image" src="./asset/images/whiteShirt.jpeg" alt="white tshirt">
@@ -151,7 +154,7 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="column d-block w-50 m-auto sale-item">
+                        <div class="col d-block w-auto m-auto sale-item">
                             <span class="sale-item-title">Blue Dress Shirt</span>
                             <br>
                             <img class="sale-item-image" src="./asset/images/blueDressShirt.jpeg"
@@ -184,7 +187,7 @@
     <h2 class="section-header">Cart</h2>
     <section class="cart-container" id="cart-section">
         <div class="cart-items">
-            <div class="column cart-item">
+            <div class="col cart-item m-auto">
                 <img class="cart-item-image" src="./asset/images/whiteShirt.jpeg" alt="White tshirt"
                     class="cart-item-image">
                 <div class="cart-description">
@@ -199,7 +202,7 @@
                 </div>
             </div>
             <br>
-            <div class="column cart-item">
+            <div class="col cart-item m-auto">
                 <img class="cart-item-image" src="./asset/images/blackShirt.jpeg" alt="Black tshirt"
                     class="cart-item-image">
                 <div class="cart-description">
@@ -214,7 +217,7 @@
                 </div>
             </div>
             <br>
-            <div class="column cart-item">
+            <div class="col cart-item m-auto">
                 <img class="cart-item-image" src="./asset/images/greenShirt.jpeg" alt="green tshirt"
                     class="cart-item-image">
                 <div class="cart-description">
@@ -228,13 +231,15 @@
                     <button class="btn btn-danger" type="button">Remove</button>
                 </div>
             </div>
-            </div>
-            <div class="cart-total">
-                <strong class="card-total-title">Total</strong>
-                <br>
-                <span class="cart-total-price">$89.99</span>
-            <button class="btn btn-primary btn-purchase" type="button">Purchase</button>
-            </div>
+        </div>
+        <div class="cart-total">
+            <strong class="card-total-title">Total</strong>
+            <br>
+            <span class="cart-total-price">$89.99</span>
+            <button class="btn btn-success btn-purchase" type="button">Purchase</button>
+            <br>
+            <span class="confirmation"></span>
+        </div>
     </section>
 
     <br>
@@ -242,17 +247,17 @@
     <br>
 
     <footer class="main-footer">
-        
-            <h3 class="searchOnline">Search for T-Shirts!</h3>
-            <ul class="nav footer-nav">
-                <li>
-                    <a href="https://www.google.com"><img class="little-shirt" src="./asset/images/blackShirt.jpeg"
-                            alt="logo shirt"></a>
-                    <p>Click to search google</p>
-                </li>
-                <li><a href="#nav-links">^ Back to top ^</a></li>
-            </ul>
-        
+
+        <h3 class="section-header searchOnline">Search for T-Shirts!</h3>
+        <ul class="nav footer-nav">
+            <li>
+                <a href="https://www.google.com"><img class="little-shirt" src="./asset/images/blackShirt.jpeg"
+                        alt="logo shirt"></a>
+                <p>Click to search google</p>
+            </li>
+            <li><a href="#nav-links">^ Back to top ^</a></li>
+        </ul>
+
     </footer>
 
     <!-- Bootstrap JS and POPPER -->

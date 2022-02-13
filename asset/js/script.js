@@ -29,11 +29,14 @@ function pageReady() {
         let button = addNewSeasonBtn[i];
         button.addEventListener('click', addNewSeasonItemToCart)
     }
-
-}
+    
+};
 setInterval(pageReady, 500)
 
-const timeElement = document.querySelector('#time');
+const userName = prompt('Enter your name:')
+const userEntry = document.getElementById('user-entry').innerText = `Hi ${userName}!`
+
+const timeElement = document.getElementById('time');
 
 function tickingTime() {
     let timeNow = new Date();
@@ -111,6 +114,13 @@ function updateCartTotal() {
     
     cartTotalPrice[0].innerText = '$'+ total;
 }
+
+// Functionality of Confirm purchase btn
+const confirmationBtn = document.querySelector('.btn-purchase');
+confirmationBtn.addEventListener('click', function(){
+alert(`Thanks ${userName}! Your order for ${document.querySelector('.cart-total-price').innerText} was confirmed at ${tickingTime()}`);
+console.log('Wrap this in a modal (Total price and time of confirmation.)')
+})
 
 updateCartTotal()
 setInterval(updateCartTotal, 500)
