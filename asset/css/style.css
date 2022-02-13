@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+    text-shadow: 2px 2px white;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,6 +20,8 @@ header {
     margin: auto;
 }
 .section-header {
+    color: cornflowerblue;
+    text-shadow: 2px 2px white;
     width: 60%;
     margin: auto;
     margin-left: 15px;
@@ -31,6 +34,15 @@ a.nav-link,
 #user-entry,
 #time {
     color:rgb(132, 165, 193);    
+    font-weight: bolder;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px white;
+}
+.shop-item-title,
+.sale-item-title,
+.cart-item-title {
+    color:rgb(94, 153, 205);    
     font-weight: bolder;
     letter-spacing: 3px;
     text-decoration: none;
@@ -142,8 +154,15 @@ button.carousel-control {
 }
 .footer-nav {
     width: auto;
+    text-align: center;
+    justify-content: center;
     margin: auto;
     margin-left: 25px;
+}
+a,
+button{
+    text-decoration: none;
+    text-shadow: none;
 }
 .little-shirt {
     width: 54px;
