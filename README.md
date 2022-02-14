@@ -6,7 +6,7 @@ Generation Australia Coding Challenge
 Challenge Requirements Can be Found here:
 https://drive.google.com/file/d/1_s8mLhP__ImxoRqaImsYHXwPRrbLflcG/view
 
-The Shop Site can be accessed via clicking the link in the about repository.
+The Shop Site can be accessed via clicking this link > https://emtech-projectdevelopment.github.io/Shopping-Cart-Challenge/
 
 If you decide to clone this Cart challenge, the Shop site can be opened by accessing index.html via live server.
 
